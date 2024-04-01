@@ -1,4 +1,4 @@
-package com.programandoenjava.desafiomarzo2024.repository;
+package com.programandoenjava.desafiomarzo2024.repository.room;
 
 import com.programandoenjava.desafiomarzo2024.entities.Room;
 

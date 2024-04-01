@@ -1,4 +1,4 @@
-package com.programandoenjava.desafiomarzo2024.repository;
+package com.programandoenjava.desafiomarzo2024.repository.room;
 
 import com.programandoenjava.desafiomarzo2024.entities.Room;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +33,8 @@ public class RoomRepositoryImpl implements RoomRepository{
         if(findRoomById.isPresent()){
             Room oldRoom = findRoomById.get();
             oldRoom.setTypeRoom(room.getTypeRoom());
-            oldRoom.setPriceRoom(room.getPriceRoom());
+            oldRoom.setPriceRoomForNigth(room.getPriceRoomForNigth());
+            oldRoom.setBooking(room.getBooking());
             return roomRepositoryJpa.save(oldRoom);
         }else {
             throw new RuntimeException("The room with id: " + id + " not exist in data base.");

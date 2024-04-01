@@ -1,7 +1,7 @@
 package com.programandoenjava.desafiomarzo2024.controller;
 
 import com.programandoenjava.desafiomarzo2024.entities.Room;
-import com.programandoenjava.desafiomarzo2024.service.RoomService;
+import com.programandoenjava.desafiomarzo2024.service.room.RoomService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -38,6 +38,8 @@ public class RoomController {
             throw new RuntimeException(e.getMessage());
         }
     }
+
+
 
     @PostMapping("/save-room")
     public ResponseEntity<Room> saveRoom(@RequestBody Room room){
